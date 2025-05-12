@@ -7,7 +7,7 @@ RUN --mount=type=cache,target=/go/pkg/mod \
 		make
 
 FROM alpine:3.16
-LABEL source_repository="https://ghcr.io/fabiante/kube-detective"
+LABEL source_repository="https://github.com/fabiante/kube-detective"
 RUN apk add --no-cache \
         ca-certificates \
         wget
