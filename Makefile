@@ -1,10 +1,10 @@
-IMAGE	  := keppel.eu-de-1.cloud.sap/ccloud/kube-detective
+IMAGE	  := ghcr.io/fabiante/kube-detective
 DATE    := $(shell date +%Y%m%d%H%M)
 VERSION := v$(DATE) 
 GOOS    ?= $(shell go env GOOS)
 GOARCH  ?= $(shell go env GOARCH)
 
-LDFLAGS     := -X github.com/sapcc/kube-detective/pkg/detective.VERSION=$(VERSION) 
+LDFLAGS     := -X ghcr.io/fabiante/kube-detective/pkg/detective.VERSION=$(VERSION) 
 GOFLAGS     := -ldflags "$(LDFLAGS)"
 
 BINARIES := detective
