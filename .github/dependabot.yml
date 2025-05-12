@@ -4,6 +4,12 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    ignore:
+      # Ignore all deps related to kubernetes versions. For that we only need
+      # to check one dependency, preferably the "k8s.io/api" package.
+      # That reduces noise created by Dependabot.
+      - dependency-name: "k8s.io/apimachinery"
+      - dependency-name: "k8s.io/client-go"
 
   - package-ecosystem: "docker"
     directory: "/"
