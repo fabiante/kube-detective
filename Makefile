@@ -44,3 +44,5 @@ docker-push-mac:
 clean: FORCE
 	rm -rf bin/*
 
+test:
+	go test -v ./...
